@@ -1,0 +1,425 @@
+*
+{
+    padding: 0px;
+    margin: 0px;
+
+}
+
+
+body
+{
+
+
+    background: #F5F5F5;
+    font-family: Arial;
+}
+
+#menu
+{
+    height: 52px;
+    border: 2px solid #ddd;
+    background: white;
+
+}
+
+#icon
+{
+    margin-top: -6px;
+    margin-left: 10px;
+    height: 23px;
+    width: 26px;
+
+}
+
+
+#menu ul li
+{
+
+    margin:15px 0px 0px 0px;
+    height: 65px;
+    list-style-type: none;
+    display: inline-block;
+}
+
+
+
+#menu ul
+{
+    margin-left: 100px;
+}
+
+#menu ul li a
+{
+
+    padding: 15px;
+    color: darkgrey;
+    text-decoration: none;
+
+}
+
+#newProducts
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#products table
+{
+    width: 100%;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-collapse: collapse;
+
+}
+
+#products th, td
+{
+    text-align: center;
+    padding: 8px;
+
+}
+#products th
+{
+    background-color: #f2f2f2;
+    color: gray;
+
+}
+
+#products tr
+{
+    border: 1px solid #ddd;
+    background: white;
+}
+
+#products input
+{
+    border: 1px solid #ddd;
+    width: 65%;
+    height: 32px;
+    padding-left:10px;
+}
+
+#products select
+{
+    border: 1px solid #ddd;
+    width: 20%;
+    height: 32px;
+    padding-left:10px;
+
+}
+
+.searchButton
+{
+
+    width: 13%;
+    height: 32px;
+    border: 1px solid #ddd;
+    background-color: #1E90FF;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*
+#products tr:nth-child(even){background-color: #f2f2f2 }
+#products tr:nth-child(odd){background-color: white }
+*/
+
+#products img
+{
+    height: 100px;
+    border: 1px solid #ddd;
+}
+
+
+.newProducts img
+{
+    height: 130px;
+    border: 1px solid #ddd;
+    margin: 5px;
+}
+
+#products
+{
+    width: 90%;
+    display: flex;
+}
+
+
+
+.proDiv
+{
+    margin-left: 200px;
+    width: 80%;
+}
+
+.proDiv2
+{
+    margin-left: 100px;
+    width: 80%;
+}
+
+
+#signInForm
+{
+    margin-left: 200px;
+    background: whitesmoke;
+    padding: 20px;
+    border: 2px solid #ddd;
+    width: 15%;
+}
+
+
+
+#countries table
+{
+    width: 100%;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-collapse: collapse;
+
+}
+
+#countries th, td
+{
+    text-align: center;
+    padding: 8px;
+
+}
+#countries th
+{
+    background-color: #f2f2f2;
+    color: gray;
+
+}
+
+#countries tr
+{
+    border: 1px solid #ddd;
+    background: white;
+
+}
+
+#countries input
+{
+    border: 1px solid #ddd;
+    width: 43px;
+    height: 20px;
+    padding-left:10px;
+}
+
+#countries
+{
+    width: 90%;
+    display: flex;
+
+}
+
+
+
+.newProducts table
+{
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-collapse: collapse;
+
+}
+
+.newProducts th, td
+{
+    text-align: center;
+    color: #777777;
+    padding: 8px;
+
+}
+
+
+.newProducts th
+{
+    background-color: #f2f2f2;
+    color: gray;
+
+}
+
+.newProducts tr
+{
+    border: 1px solid #ddd;
+    background: white;
+}
+
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+.login {
+    margin: 20px auto;
+    width: 300px;
+    border: 1px solid #ddd;
+}
+.login-screen {
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 5px
+}
+
+.app-title {
+    text-align: center;
+    color: #777;
+    margin: 10px;
+    margin-bottom: 15px;
+}
+
+.login-form {
+    text-align: center;
+}
+.control-group {
+    margin-bottom: 10px;
+}
+
+.loginInput input {
+
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 200;
+    padding: 10px 0;
+    padding-left:10px;
+    width: 260px;
+    transition: border .5s;
+}
+
+input:focus {
+    border: 2px solid #3498DB;
+    box-shadow: none;
+}
+
+input::placeholder {
+    color: darkgray;
+}
+
+.btn {
+    border: 2px solid transparent;
+    background: #3498DB;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 15px;
+    padding: 10px 0;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 3px;
+    box-shadow: none;
+    transition: 0.25s;
+    display: block;
+    width: 260px;
+    margin: 0 auto;
+}
+
+.btn:hover {
+    background-color: #2980B9;
+    cursor:pointer;
+}
+
+.login-link {
+    font-size: 12px;
+    color: #444;
+    display: block;
+    margin-top: 12px;
+}
+
+#userData{
+    font-size: 15px;
+}
+
+
+
+.control-group select
+{
+    border: 1px solid lightgray;
+    padding-left:10px;
+    border-radius: 3px;
+    font-size: 14px;
+    height: 37px;
+    font-weight: 200;
+    width: 260px;
+    transition: border .5s;
+}
+
+.top-row select
+{
+    border: 1px solid lightgray;
+    padding-left:10px;
+    border-radius: 3px;
+    font-size: 14px;
+    height: 37px;
+    font-weight: 200;
+    width: 125px;
+    transition: border .5s;
+}
+
+
+.field-wrap {
+    position: relative;
+
+}
+
+
+.field-wrap input {
+    width: 125px;
+}
+
+.top-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.top-row > div {
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+}
+.top-row > div:last-child {
+    margin: 0;
+}
+
+#logOrReg
+{
+    margin-left: 30%;
+}
+
+
+
+#logOrReg button
+{
+    color: darkgray;
+    width: 130px;
+    height: 50px;
+
+}
+
+#logBtn
+{
+    border: 1px solid #ddd;
+    display:inline-block;
+    background-color: white;
+}
+
+#regBtn
+{
+    border: 1px solid #ddd;
+    display:inline-block;
+    background-color: white;
+}
+

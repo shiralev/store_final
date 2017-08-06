@@ -1,0 +1,44 @@
+
+<div id = "signIn">
+
+
+    <div class="login">
+        <div class="login-screen">
+            <form id = signInForm2 ng-controller="userController as useCtrl" ng-submit="useCtrl.logIn(username,password)" novalidate>
+                <div class="app-title">
+                    <h2>Login</h2>
+                </div>
+
+
+
+
+                <div class="login-form">
+
+
+                    <div class="loginInput">
+                        <div class="control-group">
+                            <input type="text" ng-model="username" class="login-field" value="" placeholder="username" id="login-name">
+                            <label class="login-field-icon fui-user" for="login-name"></label>
+                        </div>
+
+                        <div class="control-group">
+                            <input type="password" ng-model="password" class="login-field" value="" placeholder="password" id="login-pass">
+                            <label class="login-field-icon fui-lock" for="login-pass"></label>
+                        </div>
+                    </div>
+
+
+
+                    <input type="submit" value="login" class="btn btn-primary btn-large btn-block">
+                    <a class="login-link" href="#">Lost your password?</a>
+
+
+                </div>
+
+
+
+            </form>
+        </div>
+    </div>
+
+</div>

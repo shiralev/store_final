@@ -1,0 +1,31 @@
+<div id="countries"  ng-controller="cartController as cartCtrl">
+
+
+    <div class="proDiv">
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Remove</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+            <tr ng-repeat="pro in cartCtrl.cartList">
+                <td>{{ pro.Productname }}</td>
+                <td>{{ pro.Categoryname}}</td>
+                <td><button ng-click="cartCtrl.removeFromCart(pro)">Remove</button></td>
+                <td>{{ pro.price | currency:"USD$" }}</td>
+                <td><input ng-model="pro.quantity" type="number"  name="input" min="1" ng-change="cartCtrl.updateQuantity(pro,pro.quantity)"></td>
+            </tr>
+            <tr>
+                <td>
+                    <h3> Total: {{cartCtrl.service.totalPrice | currency:"USD$"}}</h3>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+
+</div>

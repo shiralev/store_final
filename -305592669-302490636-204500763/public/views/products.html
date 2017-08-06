@@ -1,0 +1,34 @@
+<div  id = "products">
+
+    <div class="proDiv" ng-controller="productController as proCtrl">
+        <button class="proButton" ng-click="proCtrl.ordrBy(1)">name</button>
+        <button class="proButton" ng-click="proCtrl.ordrBy(2)">price</button>
+        <button class="proButton" ng-click="proCtrl.ordrBy(3)">category</button>
+        <br>
+        <br>
+        <input type="text" ng-model="test" name="search" placeholder="Search Bicycle..">
+        <select ng-model="selected" ng-change="proCtrl.changeSelected(selected)" ng-options="category.Categoryname for category in proCtrl.categories">
+            <option value="">Category</option>
+        </select>
+        <button class="searchButton">Search</button>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Inventory</th>
+                <th>Price</th>
+                <th>Add To Cart</th>
+            </tr>
+            <tr ng-repeat="pro in proCtrl.products | orderBy : proCtrl.order | filter: proCtrl.selected  | filter: test">
+                <td>{{ pro.Productname }} <br> <img ng-src = '{{pro.Imege}}' > </td>
+                <td>{{ pro.Categoryname}}</td>
+                <td>{{ pro.Inventory}}</td>
+                <td>{{ pro.price | currency }}</td>
+                <td><button class="proButton" ng-click="proCtrl.addToCart(pro)">Add</button></td>
+            </tr>
+        </table>
+
+    </div>
+
+</div>
+
