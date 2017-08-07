@@ -1,0 +1,51 @@
+
+<div class="login-container" ng-controller="mainController as mainCtrl">
+   <div class = "proDiv2" ng-controller="newProductsController as newCtrl">
+
+
+
+
+       <div class="newProducts">
+           <table>
+               <tr><th>Best Sellers</th></tr>
+               <tr >
+                   <td ng-repeat="pro in newCtrl.hotProducts">
+                       <h5>{{ pro.Productname }}</h5>
+                       <img ng-src = '{{pro.Imege}}'>
+                       <h5>{{ pro.price | currency }}</h5>
+                   </td>
+               </tr>
+           </table>
+       </div>
+
+       <br>
+       <br>
+
+
+       <div class="newProducts" ng-show="mainCtrl.userService.isLoggedIn">
+           <table>
+               <tr><th>New Products</th></tr>
+               <tr >
+                   <td ng-repeat="pro in newCtrl.newProducts">
+                       <h5>{{ pro.Productname }}</h5>
+                       <img ng-src = '{{pro.Imege}}'>
+                       <h5>{{ pro.price | currency }}</h5>
+                   </td>
+               </tr>
+           </table>
+       </div>
+
+        <br>
+        <br>
+
+       <div id="logOrReg" ng-show="!mainCtrl.userService.isLoggedIn">
+           <button class="btn" id="logBtn" value="Login" ng-click="mainCtrl.loginReDirect()">Login</button>
+           <button class="btn" id="regBtn" value="Register" ng-click="mainCtrl.rgisterReDirect()">Register</button>
+       </div>
+
+
+       <br>
+       <br>
+
+   </div>
+</div>

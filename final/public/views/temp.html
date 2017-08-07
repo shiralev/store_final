@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<header><h1>Routing App Example</h1></header>
+
+<div ng-controller="mainController as mainCtrl">
+    <div>
+        <a ng-href="#/">Home</a>
+    </div>
+    <div ng-show="mainCtrl.userService.isLoggedIn">
+        <a ng-href="#/cities">Cities List</a>
+    </div>
+    <div>
+            <span ng-hide="mainCtrl.userService.isLoggedIn">
+                <a ng-href="#/login">Login</a>
+            </span>
+    </div>
+    <div>
+            <span>
+                <a ng-href="#/StorageExample">Local-Storage</a>
+            </span>
+    </div>
+</div>
+<br>
+<br>
+<ng-view></ng-view>
+
+
+</body>
+</html>

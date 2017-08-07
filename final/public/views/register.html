@@ -1,0 +1,167 @@
+
+
+
+<div id = "register">
+
+
+    <div class="login">
+        <div class="login-screen">
+            <form id = signInForm2 name="regForm" ng-controller="registerController as redCtrl" ng-submit="redCtrl.register(regForm.$valid)">
+                <div class="app-title">
+                    <h2>Register</h2>
+                </div>
+
+                <div class="login-form">
+
+            <div class="loginInput">
+
+
+
+
+
+                    <div class="top-row">
+
+                        <div class="field-wrap">
+                            <div class="control-group">
+                                <input type="text" ng-model="redCtrl.Username" ng-minlength="3" ng-maxlength="8" ng-required="true" class="login-field" value="" placeholder="Username" >
+                            </div>
+                        </div>
+
+                        <div class="field-wrap">
+                            <div class="control-group">
+                                <input type="password" ng-model="redCtrl.Password" ng-minlength="5" ng-maxlength="10" ng-required="true" class="login-field" value="" placeholder="Password" >
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                <div class="top-row">
+
+                    <div class="field-wrap">
+                        <div class="control-group">
+                            <input type="email" ng-model="redCtrl.Mail" ng-required="true" class="login-field" value="" placeholder="Email" >
+                        </div>
+                    </div>
+
+                    <div class="field-wrap">
+                        <div class="control-group">
+                            <input type="text" ng-model="redCtrl.Cellular " ng-required="true" class="login-field" value="" placeholder="Cellular " >
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                        <div class="top-row">
+
+                            <div class="field-wrap">
+                                <div class="control-group">
+                                    <input type="text" ng-model="redCtrl.Firsname" class="login-field" value="" placeholder="First Name" >
+                                </div>
+                            </div>
+
+                            <div class="field-wrap">
+                                <div class="control-group">
+                                    <input type="text" ng-model="redCtrl.Lastname" class="login-field" value="" placeholder="Last Name" >
+                                </div>
+                            </div>
+
+                        </div>
+
+                    <div class="top-row">
+
+                        <div class="field-wrap">
+                            <div class="control-group">
+                                <input type="text" ng-model="redCtrl.Address" ng-required="true" class="login-field" value="" placeholder="Address" >
+                            </div>
+                        </div>
+
+                        <div class="field-wrap">
+                            <div class="control-group">
+                                <input type="text" ng-model="redCtrl.City" ng-required="true" class="login-field" value="" placeholder="City" >
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                <div class="top-row">
+
+
+                    <div class="field-wrap">
+                        <div class="control-group" ng-controller="countriesController as couCtrl" >
+                            <select ng-model="redCtrl.Country" class="login-field" placeholder="Countries" ng-options="country.Name for country in couCtrl.countries">
+                                <option value="">Country</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="field-wrap">
+                        <div class="control-group" ng-controller="categoriesController as catCtrl" >
+                            <select ng-model="cat" class="login-field" ng-options="category.Categoryname for category in catCtrl.categories">
+                                <option value="">Categories</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                    <div class="control-group" >
+                        <select class="login-field">
+                            <option value="">What is your favorite song?</option>
+                            <option value="">What is your favorite food?</option>
+                            <option value="">What is your grandmother's name?</option>
+                        </select>
+                    </div>
+
+                <div class="control-group">
+                    <input type="text" ng-model="redCtrl.Answer" class="login-field" value="" placeholder="Answer" >
+                </div>
+
+
+
+
+                <div class="top-row">
+
+
+                    <div class="field-wrap">
+                        <div class="control-group">
+                            <input type="password" ng-model="redCtrl.Creditcard" class="login-field" value="" placeholder="Creditcard Num">
+                        </div>
+                    </div>
+
+                    <div class="field-wrap">
+                        <div class="control-group">
+                            <input type="text" ng-model="redCtrl.Phone" ng-required="true" class="login-field" value="" placeholder="Phone Num" >
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+                </div>
+
+
+                    <input type="submit" value="register" class="btn btn-primary btn-large btn-block">
+
+
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
+
+</div>

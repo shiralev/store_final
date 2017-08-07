@@ -1,0 +1,82 @@
+
+<div id = "signIn" ng-controller="userController as useCtrl">
+
+
+    <div class="login">
+        <div class="login-screen">
+
+
+            <form id = signInForm2 ng-show="!useCtrl.forgot"  ng-submit="useCtrl.logIn(username,password)" novalidate>
+                <div class="app-title">
+                    <h2>Login</h2>
+                </div>
+
+
+                <div class="login-form">
+
+
+                    <div class="loginInput">
+
+                        <div class="control-group">
+                            <input type="text" ng-model="username" class="login-field" value="" placeholder="Username" id="login-name">
+                            <label class="login-field-icon fui-user" for="login-name"></label>
+                        </div>
+
+                        <div class="control-group">
+                            <input type="password" ng-model="password" class="login-field" value="" placeholder="Password" id="login-pass">
+                            <label class="login-field-icon fui-lock" for="login-pass"></label>
+                        </div>
+                    </div>
+
+
+
+                    <input type="submit" value="login" class="btn btn-primary btn-large btn-block">
+                    <a class="login-link" href="#/Signin" ng-click="useCtrl.forgot = true">Lost your password?</a>
+
+                </div>
+
+            </form>
+
+
+            <form ng-show="useCtrl.forgot" ng-submit="useCtrl.showPassword()">
+
+
+                <div class="app-title">
+                    <h2>Security Question</h2>
+                </div>
+
+                <div class="login-form">
+
+                    <div class="loginInput">
+
+                        <div class="control-group">
+                            <input type="text" class="login-field" ng-model="useCtrl.userName" value="" placeholder="Username">
+                        </div>
+
+                        <div class="control-group" >
+                            <select class="login-field">
+                                <option value="">What is your favorite song?</option>
+                                <option value="">What is your favorite food?</option>
+                                <option value="">What is your grandmother's name?</option>
+                            </select>
+                        </div>
+
+                        <div class="control-group">
+                            <input type="text" class="login-field" ng-model="useCtrl.security" value="" placeholder="Answer">
+                        </div>
+
+                    </div>
+
+                    <input type="submit" value="Show Password" class="btn btn-primary btn-large btn-block">
+
+                </div>
+
+            </form>
+
+
+
+
+        </div>
+    </div>
+
+</div>

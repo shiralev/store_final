@@ -1,0 +1,71 @@
+
+
+
+
+<div  id = "products" ng-controller="productController as proCtrl">
+
+    <div class="proDiv" >
+        <button class="proButton" ng-click="proCtrl.ordrBy(1)">name</button>
+        <button class="proButton" ng-click="proCtrl.ordrBy(2)">price</button>
+        <button class="proButton" ng-click="proCtrl.ordrBy(3)">category</button>
+        <br>
+        <br>
+        <input type="text" ng-model="test" name="search" placeholder="Search Bicycle..">
+        <select ng-model="selected" ng-change="proCtrl.changeSelected(selected)" ng-options="category.Categoryname for category in proCtrl.categories">
+            <option value="">Category</option>
+        </select>
+        <button class="searchButton">Search</button>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Details</th>
+                <th>Category</th>
+                <th>Inventory</th>
+                <th>Price</th>
+                <th>Add To Cart</th>
+            </tr>
+            <tr ng-repeat="pro in proCtrl.products | orderBy : proCtrl.order | filter: proCtrl.selected  | filter: test">
+                <td>{{ pro.Productname }} <br> <img ng-src = '{{pro.Imege}}' > </td>
+
+
+                    <td ng-controller="demoCtrl as demo">
+                        <button class="proButton" ng-click="demo.alert(pro.Productname, pro.Details)">Details</button>
+                    </td>
+
+
+                <td>{{ pro.Categoryname}}</td>
+                <td>{{ pro.Inventory}}</td>
+                <td>{{ pro.price | currency }}</td>
+                <td><button class="proButton" ng-click="proCtrl.addToCart(pro)">Add</button></td>
+
+            </tr>
+        </table>
+
+
+
+
+        <div class="newProducts" ng-controller="mainController as mainCtrl">
+            <table ng-show="mainCtrl.userService.isLoggedIn">
+                <tr><th>Recommended</th></tr>
+                <tr >
+                    <td ng-repeat="pro in proCtrl.recommended">
+                        <h5>{{ pro.Productname }}</h5>
+                        <img ng-src = '{{pro.Imege}}'>
+                        <h5>{{ pro.price | currency }}</h5>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <br>
+
+
+
+    </div>
+
+
+
+
+
+</div>
+

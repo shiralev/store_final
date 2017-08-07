@@ -1,0 +1,52 @@
+
+
+
+<div ng-controller="citiesController as citiesCtrl">
+    <h2>Cities Page</h2>
+    <br>
+    <button ng-click="citiesCtrl.getCities()">Get Cities</button>
+    <div ng-show="citiesCtrl.cities">
+        <table>
+            <thead>
+                <tr>
+                    <a href="" ng-click="citiesCtrl.fieldToOrderBy='name'">
+                        Name
+                    </a>
+                </tr>
+                <tr>
+                    <a href="" ng-click="citiesCtrl.fieldToOrderBy='country'">
+                        Country
+                    </a>
+                </tr>
+                <tr>
+                    <a href="">
+                        Population
+                    </a>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr ng-repeat="city in citiesCtrl.cities | orderBy:citiesCtrl.fieldToOrderBy">
+                    <td>{{city.name}}</td>
+                    <td>{{city.country}}</td>
+                    <td>{{city.population}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <div>
+        <h3>Add your own city</h3>
+        <label>
+            City Name
+            <input type="text" ng-model="citiesCtrl.myCity.name">
+        </label>
+        <br>
+        <label>
+            Country
+            <input type="text" ng-model="citiesCtrl.myCity.country">
+        </label>
+        <button ng-click="citiesCtrl.addCity()">Add City</button>
+    </div>
+
+</div>

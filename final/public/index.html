@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>My Page</title>
+    <script src="angularScripts/angular.js"></script>
+    <script src="app.js"></script>
+    <script type="text/javascript" src="angularScripts/angular-route.js"></script>
+    <script type="text/javascript" src="angularScripts/angular-local-storage.min.js"></script>
+    <script type="text/javascript" src="StorageExampleController.js"></script>
+    <script type="text/javascript" src="CityModel.js"></script>
+    <link rel="stylesheet" type="text/css" href="views/style.css" />
+
+    <link rel="stylesheet" type="text/css" href="node_modules/sweetalert/lib/sweet-alert.css">
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-sweetalert/SweetAlert.min.js"></script>
+    <script src="node_modules/sweetalert/lib/sweet-alert.min.js"></script>
+
+
+</head>
+<body>
+
+<div id="menu">
+
+    <div ng-controller="mainController as mainCtrl">
+
+
+
+        <ul>
+
+            <li >
+                <div>
+                    <a ng-href="#/">Home</a>
+                </div>
+            </li>
+
+
+            <li >
+                <div>
+                    <span>
+                         <a ng-href="#/Products">Products</a>
+                    </span>
+                </div>
+            </li>
+            <li ng-show="!mainCtrl.userService.isLoggedIn">
+                <div>
+                    <span>
+                         <a ng-href="#/Signin">Signin</a>
+                    </span>
+                </div>
+            </li>
+            <li ng-show="!mainCtrl.userService.isLoggedIn">
+                <div>
+                    <span>
+                         <a ng-href="#/Register">Register</a>
+                    </span>
+                </div>
+            </li>
+            <li id="cart" ng-show="mainCtrl.userService.isLoggedIn">
+                <div>
+                    <span>
+                         <a id="cartt" class="facebook-button" ng-href="#/Countries"> <img id="icon" src="img/cart.png"></a>
+                    </span>
+                </div>
+            </li>
+            <li ng-show="!mainCtrl.userService.isLoggedIn">
+                <div>
+                    <span>
+                         <a>Hi guest!</a>
+                    </span>
+                </div>
+            </li>
+            <li ng-show="mainCtrl.userService.isLoggedIn">
+                <div id = "userData">
+                    <span>
+                         <a>Hi {{mainCtrl.userService.userName}}! ,  Your last visit: {{mainCtrl.userService.date}}</a>
+                    </span>
+                </div>
+            </li>
+            <li>
+                <div ng-controller="demoCtrl as demo">
+                    <span>
+                         <a ng-href="#/{{category.link}}" ng-click="demo.alert('About', demo.about)">About</a>
+                    </span>
+                </div>
+            </li>
+
+
+        </ul>
+
+
+
+        </div>
+
+
+         <ng-view></ng-view>
+
+    </div>
+</div>
+
+</body>
+</html>
